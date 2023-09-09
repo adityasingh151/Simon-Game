@@ -19,6 +19,6 @@ A web-based implementation of the classic Simon memory game.
 
 ## Try It Out
 
-Play the game [here]().
+Play the game [here](https://adityasingh151.github.io/Simon-Game/).
 
 
