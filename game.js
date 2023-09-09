@@ -9,22 +9,25 @@ var userClickedPattern = [];
 var started = false; // Has the game started?
 var level = 0;       // Current level
 
-// Event listener for key press to start the game
-$(document).keypress(function() {
-  if (!started) {
-    $("#level-title").text("Level " + level);
-    nextSequence();
-    started = true;
-  }
-});
-// Event listener for click to start the game
-$(document).click(function() {
+$(document).ready(function() {
+  // Event listener for key press to start the game
+  $(document).keypress(function() {
     if (!started) {
       $("#level-title").text("Level " + level);
       nextSequence();
       started = true;
     }
   });
+
+  // Event listener for a click on the mobile screen
+  $(document).on("click", function() {
+    if (!started) {
+      $("#level-title").text("Level " + level);
+      nextSequence();
+      started = true;
+    }
+  });
+});
 
 // Event listener for button click
 $(".btn").click(function() {
