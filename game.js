@@ -17,6 +17,14 @@ $(document).keypress(function() {
     started = true;
   }
 });
+// Event listener for click to start the game
+$(document).click(function() {
+    if (!started) {
+      $("#level-title").text("Level " + level);
+      nextSequence();
+      started = true;
+    }
+  });
 
 // Event listener for button click
 $(".btn").click(function() {
